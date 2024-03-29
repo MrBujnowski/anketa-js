@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1711739005938,
+    "timestamp": "2024-03-29T19:03:25.938Z",
+    "answers": {
+      "hours": "-1.4",
+      "sport": "plavání",
+      "importance": "5",
+      "roleModel": "tonda"
+    }
+  },
+  {
+    "id": 1711739055125,
+    "timestamp": "2024-03-29T19:04:15.125Z",
+    "answers": {
+      "hours": "0.8",
+      "sport": "plavání",
+      "importance": "0",
+      "roleModel": "pavel"
+    }
+  }
+]
