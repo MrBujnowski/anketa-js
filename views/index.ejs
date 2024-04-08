@@ -5,87 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Webová anketa</title>
-<!--
-    <style>
-        /* Přidání explicitního stylu pro první otázku */
-        .form-container > div:first-child {
-            display: block;
-        }
-    </style>
--->
-
 </head>
 <body>
     <main>
-        <h1>Webová anketa</h1>
+        <h1>Trolley problem</h1>
         <form action="/submit" method="post" class="form-container">
             <div>
-                <label for="hours">Průměrný počet hodin, které týdně věnujete sportu nebo jiné pohybové aktivitě:</label>
-                <input type="number" step="0.1" id="hours" name="hours" required>
+                <h2>Original problem</h2>
+                <p>So, we have a problem, there's a train headed for five people tied up on the tracks, you can pull the lever to divert it to the other track, killing 1 person instead. Would you pull the lever? </p>
+                <img src="images/original.jpg" alt="Obrázek otázky">
+                <button type="button" class="answerButton" data-answer="yes" name="question1">Yes</button>
+                <button type="button" class="answerButton" data-answer="no" name="question1">No</button>
             </div>
-            
             <div>
-                <label>Vyberte si sport pro hodinu tělocviku:</label>
-                <select id="sport" name="sport">
-                    <option value="atletika">Atletika</option>
-                    <option value="gymnastika">Gymnastika</option>
-                    <option value="plavání">Plavání</option>
-                    <option value="cyklistika">Cyklistika</option>
-                    <option value="bruslení">Bruslení</option>
-                    <option value="lyžování">Lyžování</option>
-                    <option value="volejbal">Volejbal</option>
-                    <option value="florbal">Florbal</option>
-                    <option value="golf">Golf</option>
-                </select>
+                <h2>Original problem</h2>
+                <p>Really think about it, would you actually? </p>
+                <img src="images/original.jpg" alt="Obrázek otázky">
+                <button type="button" class="answerButton" data-answer="yes" name="question6">Yes</button>
+                <button type="button" class="answerButton" data-answer="no" name="question6">No</button>
             </div>
-            
             <div>
-                <label for="importance">Jakou roli hraje sport ve vašem životě? (0 = žádnou, 5 = mimořádnou)</label>
-                <input type="range" id="importance" name="importance" min="0" max="5" step="1">
+                <h2>Priceless artwork</h2>
+                <p>Help! A trolley is heading towards a group of five people on the tracks. If you pull the lever, you can divert it onto another track and save those people, but in doing so, you'll destroy the original copy of the Mona Lisa. Would you pull the lever?</p>
+                <img src="images/mona_lisa.jpg" alt="Obrázek otázky">
+                <button type="button" class="answerButton" data-answer="yes" name="question2">Yes</button>
+                <button type="button" class="answerButton" data-answer="no" name="question2">No</button>
             </div>
-            
             <div>
-                <label for="roleModel">Napište jméno svého sportovního vzoru:</label>
-                <input type="text" id="roleModel" name="roleModel">
+                <h2>Bribery</h2>
+                <p>Oh no! A trolley is heading towards a rich man. The rich man offers you $500,000 to pull the lever, which would divert the trolley and kill someone else. Would you pull the lever?</p>
+                <img src="images/money.jpg" alt="Obrázek otázky">
+                <button type="button" class="answerButton" data-answer="yes" name="question3">Yes</button>
+                <button type="button" class="answerButton" data-answer="no" name="question3">No</button>
             </div>
+            <div>
+                <h2>Four people</h2>
+                <p>Oh deer! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, killing 4 people instead. Would you pull the lever?</p>
+                <img src="images/4-5.jpg" alt="Obrázek otázky">
+                <button type="button" class="answerButton" data-answer="yes" name="question4">Yes</button>
+                <button type="button" class="answerButton" data-answer="no" name="question4">No</button>
+            </div>
+            <div>
+                <h2>You</h2>
+                <p>Oh no! A trolley is heading towards 5 people. You can pull the lever to divert it to the other track, sacrificing yourself instead. Would you pull the lever?</p>
+                <img src="images/you.jpg" alt="Obrázek otázky">
+                <button type="button" class="answerButton" data-answer="yes" name="question5">Yes</button>
+                <button type="button" class="answerButton" data-answer="no" name="question5">No</button>
+            </div>
+        
             
-            <button type="submit">Odeslat odpovědi</button>
+            <button type="submit" id="submitButton" style="display: none;">Submit answers</button>
+            <a id="buttonback" style="display: none;" href="/">Take me back</a>
+            
         </form>
-    </main>
-</body>
-<!--
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Získání všech otázek
-        var questions = document.querySelectorAll('.form-container > div');
-        
-        // Funkce pro zobrazení následující otázky
-        function showNextQuestion(currentQuestionIndex) {
-            // Skrytí aktuální otázky
-            questions[currentQuestionIndex].style.display = 'none';
-            
-            // Zobrazení následující otázky, pokud existuje
-            if (currentQuestionIndex < questions.length - 1) {
-                questions[currentQuestionIndex + 1].style.display = 'block';
-            }
-        }
-        
-        // Nastavení události pro zobrazení následující otázky po stisknutí tlačítka "Odeslat odpovědi"
-        var submitButton = document.querySelector('button[type="submit"]');
-        submitButton.addEventListener('click', function(event) {
-            // Zabránění odeslání formuláře
-            event.preventDefault();
-            
-            // Získání indexu aktuální otázky
-            var currentQuestionIndex = Array.from(questions).findIndex(function(question) {
-                return question.style.display !== 'none';
-            });
-            
-            // Zobrazení následující otázky
-            showNextQuestion(currentQuestionIndex);
-        });
-    });
-</script>
--->
+        <%- include('footer'); -%>
 
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var questionDivs = document.querySelectorAll('.form-container > div');
+            var submitButton = document.getElementById('submitButton');
+
+            // Funkce pro zobrazení tlačítka submit po zodpovězení všech otázek
+            function showSubmitButton() {
+                submitButton.style.display = 'block';
+                buttonback.style.display = 'block';
+            }
+
+            // Přidání posluchačů událostí pro tlačítka Ano/Ne na každé otázce
+            questionDivs.forEach(function(questionDiv) {
+                var answerButtons = questionDiv.querySelectorAll('.answerButton');
+                answerButtons.forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        var questionName = button.getAttribute('name');
+                        var answer = button.getAttribute('data-answer');
+                        var responseInput = document.createElement('input');
+                        responseInput.setAttribute('type', 'hidden');
+                        responseInput.setAttribute('name', questionName);
+                        responseInput.setAttribute('value', answer);
+                        document.querySelector('.form-container').appendChild(responseInput);
+
+                        questionDiv.style.display = 'none';
+                        var nextQuestionIndex = Array.from(questionDivs).indexOf(questionDiv) + 1;
+                        if (nextQuestionIndex < questionDivs.length) {
+                            questionDivs[nextQuestionIndex].style.display = 'block';
+                        } else {
+                            showSubmitButton();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
 </html>

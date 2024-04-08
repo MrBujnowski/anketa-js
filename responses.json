@@ -1,22 +1,50 @@
 [
   {
-    "id": 1711739005938,
-    "timestamp": "2024-03-29T19:03:25.938Z",
+    "id": 1712607535904,
+    "timestamp": "2024-04-08T20:18:55.904Z",
     "answers": {
-      "hours": "-1.4",
-      "sport": "plavání",
-      "importance": "5",
-      "roleModel": "tonda"
+      "question1": "yes",
+      "question2": "yes",
+      "question3": "yes",
+      "question4": "yes",
+      "question5": "no",
+      "question6": "no"
     }
   },
   {
-    "id": 1711739055125,
-    "timestamp": "2024-03-29T19:04:15.125Z",
+    "id": 1712607594693,
+    "timestamp": "2024-04-08T20:19:54.693Z",
     "answers": {
-      "hours": "0.8",
-      "sport": "plavání",
-      "importance": "0",
-      "roleModel": "pavel"
+      "question1": "yes",
+      "question2": "yes",
+      "question3": "no",
+      "question4": "yes",
+      "question5": "no",
+      "question6": "no"
+    }
+  },
+  {
+    "id": 1712607633236,
+    "timestamp": "2024-04-08T20:20:33.236Z",
+    "answers": {
+      "question1": "no",
+      "question2": "no",
+      "question3": "yes",
+      "question4": "no",
+      "question5": "yes",
+      "question6": "yes"
+    }
+  },
+  {
+    "id": 1712607857697,
+    "timestamp": "2024-04-08T20:24:17.697Z",
+    "answers": {
+      "question1": "yes",
+      "question2": "yes",
+      "question3": "no",
+      "question4": "yes",
+      "question5": "no",
+      "question6": "no"
     }
   }
 ]

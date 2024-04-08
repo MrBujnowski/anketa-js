@@ -16,24 +16,28 @@ app.get("/", (req, res) => {
 
 /* Routa pro zpracování dat z formuláře */
 app.post("/submit", (req, res) => {
-  // Zde budeme ukládat data z formuláře do souboru responses.json
   const newResponse = {
-    id: Date.now(), // Jednoduchý způsob, jak generovat unikátní ID
+    id: Date.now(),
     timestamp: new Date().toISOString(),
-    answers: req.body, // Předpokládáme, že všechny odpovědi jsou ve formátu, který chceme uložit
+    answers: {
+      question1: req.body.question1,
+      question2: req.body.question2,
+      question3: req.body.question3,
+      question4: req.body.question4,
+      question5: req.body.question5,
+      question6: req.body.question5
+    }
   };
 
-  // Čtení stávajících dat z souboru
   fs.readFile("responses.json", (err, data) => {
     if (err) throw err;
     let json = JSON.parse(data);
     json.push(newResponse);
 
-    // Zápis aktualizovaných dat zpět do souboru
     fs.writeFile("responses.json", JSON.stringify(json, null, 2), (err) => {
       if (err) throw err;
       console.log("Data byla úspěšně uložena.");
-      res.redirect("/results"); // Přesměrování na stránku s výsledky
+      res.redirect("/results");
     });
   });
 });

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color:white;
     margin: 0;
     padding: 0;
 }
@@ -8,25 +8,14 @@ body {
 
 h1 {
     color: white;
-    background-color: blue;
+    background-color: rgb(80, 80, 80);
     font-size: 30pt;
     padding: 10px;
     margin: 0;
+    text-align: center;
+
 }  
 
-/*div {
-    display: none;
-}
-*/
-
-.form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-}
 
 label {
     font-weight: bold;
@@ -34,66 +23,11 @@ label {
     margin-bottom: 5px;
 }
 
-input[type=text],
-input[type=number],
-select,
-input[type=range] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-}
 
-input[type=range] {
-    -webkit-appearance: none;
-    width: 80%;
-    height: 8px;
-    border-radius: 5px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-}
-
-input[type=range]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-}
-
-input[type=submit] {
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
 table {
-    width: 100%;
+    width: 98%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -125,3 +59,128 @@ tr:hover {
     padding: 20px;
     border-radius: 8px;
 }
+
+  /* Přidání explicitního stylu pro první otázku */
+  .form-container > div:first-child {
+    display: block;
+}
+
+div {
+    display: none;
+}
+.form-container {
+    text-align: center; /* Zarovnání obsahu na střed */
+}
+.form-container img {
+    width: auto; /* Nastavení stejné šířky pro všechny obrázky */
+    height: 75%; /* Zachování poměru stran */
+    margin: 0 auto; /* Zarovnání na střed */
+    display: block; /* Zamezení prolínání s inline elementy */
+}
+
+
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+
+  }
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
+  
+  button:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+  #submitButton {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#buttonback {
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.answerButton {
+    position: fixed;
+    bottom: 15%;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+/* Přidejte větší mezeru mezi tlačítky Ano a Ne */
+.answerButton:nth-child(odd) {
+    margin-left: 100px;
+}
+
+.form-container img {
+    width: auto;
+    height: 75%;
+    margin: 0 auto;
+    display: block;
+    opacity: 0; /* Začáteční hodnota opacity */
+    animation: fadeIn 3s forwards; /* Animace postupného zvýšení opacity */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Začáteční hodnota opacity */
+    }
+    to {
+        opacity: 1; /* Konečná hodnota opacity */
+    }
+}
+a {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    position: absolute;
+    /*left: 90%;
+    top:1%;*/
+}
+a:hover{
+    background-color: #555555;
+    color: white;
+}
+#button{
+    right:45%;
+    margin: 10px;
+    margin-down: 30px;
+}
+footer {
+    background-color: #dddddd; /* Šedé pozadí */
+    color: #000000; /* Černá barva textu */
+    padding: 2px; /* Odsazení vnitřního obsahu */
+    text-align: center; /* Zarovnání textu na střed */
+    position: fixed; /* Fixní pozice na spodku */
+    width: 100%; /* 100% šířka */
+    bottom: 0; /* Zajištění, že bude umístěn úplně dole */
+}
+

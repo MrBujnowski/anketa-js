@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Výsledky ankety</title>
+    <title>Results of anket</title>
 </head>
 <body>
-    <h1>Výsledky ankety</h1>
-    <div class="container">
+    <h1>Results</h1>
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Datum</th>
-            <th>Čas</th>
-            <th>Hodiny týdně</th>
-            <th>Zaměření TV</th>
-            <th>Význam sportu</th>
-            <th>Sportovní vzor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Original problem</th>
+            <th>Really?</th>
+            <th>Mona Lisa</th>
+            <th>Rich man</th>
+            <th>Four people</th>
+            <th>You</th>
         </tr>
-        <% responses.forEach(function(response) { 
-            const date = new Date(response.timestamp);
-            const dateString = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`;
-            const timeString = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)}`;
-        %>
+        <% responses.forEach(function(response) { %>
             <tr>
                 <td><%= response.id %></td>
-                <td><%= dateString %></td>
-                <td><%= timeString %></td>
-                <td><%= response.answers.hours %></td>
-                <td><%= response.answers.sport %></td>
-                <td><%= response.answers.importance %></td>
-                <td><%= response.answers.roleModel %></td>
+                <td><%= new Date(response.timestamp).toLocaleDateString() %></td>
+                <td><%= new Date(response.timestamp).toLocaleTimeString() %></td>
+                <td><%= response.answers.question1 %></td>
+                <td><%= response.answers.question6 %></td>
+                <td><%= response.answers.question2 %></td>
+                <td><%= response.answers.question3 %></td>
+                <td><%= response.answers.question4 %></td>
+                <td><%= response.answers.question5 %></td>
             </tr>
         <% }); %>
-    </table>    
-</div>
+    </table> 
+    <a id="button" href="/">Take me back</a>   
+    <%- include('footer'); -%>
 </body>
 </html>
