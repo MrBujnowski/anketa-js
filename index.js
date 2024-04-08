@@ -25,7 +25,8 @@ app.post("/submit", (req, res) => {
       question3: req.body.question3,
       question4: req.body.question4,
       question5: req.body.question5,
-      question6: req.body.question5
+      question6: req.body.question5,
+      name: req.body.personName
     }
   };
 

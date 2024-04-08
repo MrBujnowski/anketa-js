@@ -175,12 +175,25 @@ a:hover{
     margin-down: 30px;
 }
 footer {
-    background-color: #dddddd; /* Šedé pozadí */
-    color: #000000; /* Černá barva textu */
-    padding: 2px; /* Odsazení vnitřního obsahu */
-    text-align: center; /* Zarovnání textu na střed */
-    position: fixed; /* Fixní pozice na spodku */
-    width: 100%; /* 100% šířka */
-    bottom: 0; /* Zajištění, že bude umístěn úplně dole */
+    background-color: #dddddd;
+    color: #000000;
+    padding: 2px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+input[type=text] {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border:1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/*input[type=text]:hover {
+    background-color: #3f3f3f;
 }
 

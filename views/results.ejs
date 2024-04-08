@@ -19,6 +19,7 @@
             <th>Rich man</th>
             <th>Four people</th>
             <th>You</th>
+            <th>Name</th>
         </tr>
         <% responses.forEach(function(response) { %>
             <tr>
@@ -31,6 +32,7 @@
                 <td><%= response.answers.question3 %></td>
                 <td><%= response.answers.question4 %></td>
                 <td><%= response.answers.question5 %></td>
+                <td><%= response.answers.name %></td>
             </tr>
         <% }); %>
     </table> 
